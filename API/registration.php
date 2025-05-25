@@ -10,7 +10,7 @@ $password = $_POST['password'];
 $gender = $_POST['gender'];
 $confirmpassword = $_POST['confirmpassword'];
 $address = $_POST['address'];
-$image = $_FILES['photo']['name'];
+$image = null;          //$_FILES['photo']['name'];
 $tmp_name = $_FILES['photo']['tmp_name'];
 $role = $_POST['role'];
 

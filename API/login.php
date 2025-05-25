@@ -40,8 +40,19 @@ if ($row) {
     // Verify password
     if (password_verify($password, $row['password'])) {
         $verified = $row['verified'];
-        if(!$verified) {echo '<script>alert("You are not verified!");
-             window.location = "../Routes/reg.html";</script>';
+        if (!$verified) {
+            echo '<script>
+                alert("You are not verified!");
+                window.location = "../Routes/otp_req.php?role=' . $role . '&number=' . $mobile . '";
+            </script>';
+        }
+
+        $face_uploaded = !empty($row['photo']) || !empty($row['cand_img']);
+        if(!$face_uploaded) {
+            echo '<script>
+                alert("Your photo is not updated!");
+                window.location = "../Routes/face_reg.php?role=' . $role . '&number=' . $mobile . '";
+            </script>';
         }
 
         // Reset failed attempts
@@ -65,7 +76,7 @@ if ($row) {
 
         // Redirect based on role
         if ($role == 1 || $role == 2) {
-            echo '<script>window.location.replace("../Routes/dashboard.php");</script>';
+            echo '<script>window.location.replace("../Routes/face_auth.php?role=' . $role . '&number=' . $mobile . '");</script>';
             exit; // Stop further execution
         }
     } else {

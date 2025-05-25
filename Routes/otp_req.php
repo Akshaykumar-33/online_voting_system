@@ -97,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 success: function(data) {
                     if (data.success) {
                         alert("Registration Successful");
-                        window.location.href = "login.php";
+                        window.location.href = "face_reg.php?role=<?php echo $_GET['role']; ?>&number=<?php echo $_GET['number']; ?>";
                     } else {
                         alert(data.message);
                     }

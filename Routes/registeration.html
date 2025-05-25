@@ -16,28 +16,24 @@
     <div id="bodysection">
         <h2>Registration</h2>
         <form action="../API/registration.php" method="post" enctype="multipart/form-data">
-            <input type="text" name="name" placeholder="Enter your name" required><br>
-            <input type="tel" name="number" placeholder="Enter your Number" minlength="10" required><br>
-            <input type="password" name="password" placeholder="Enter password" minlength="8"><br>
-            <input type="password" name="confirmpassword" placeholder="Confirm password" required><br>
+            <input type="text" name="name" placeholder="Enter your name" value="Vinit" required><br>
+            <input type="tel" name="number" placeholder="Enter your Number" value="7060710030" minlength="10" required><br>
+            <input type="password" name="password" placeholder="Enter password" value="pagal123" minlength="8"><br>
+            <input type="password" name="confirmpassword" placeholder="Confirm password" value="pagal123" required><br>
             <p>
                 <label for="male">Gender:</label>
-                <input type="radio" name="gender" id="male" value="Male">
+                <input type="radio" name="gender" id="male" value="Male" checked>
                 <label for="male">Male</label>
                 <input type="radio" name="gender" id="female" value="Female">
                 <label for="female">Female</label>
             </p>
-            <input type="text" name="address" placeholder="Address"><br>
-            <div class="role-upload">
-                <label for="photo">Upload Image:</label>
-                <input type="file" name="photo" id="photo" class="upload-button" required>
-            </div>
+            <input type="text" name="address" placeholder="Address" value="B-34"><br>
 
             <div class="role-upload">
                 <label for="role">Select your role:</label>
                 <select name="role" id="role">
                     <option value="3">Select Option</option>
-                    <option value="1">Voter</option>
+                    <option value="1" selected>Voter</option>
                     <option value="2">Group</option>
                 </select>
             </div>
