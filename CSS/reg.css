@@ -1,0 +1,72 @@
+html,
+body {
+    background-image: url(../images/img16.jpg);
+    background-size: cover;
+    padding: 10px;
+    height: 100%;
+
+}
+
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 4px;
+
+}
+
+#candidate {
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #007bff;
+    color: white;
+    border: 2px solid white;
+    padding: 5px;
+    margin: px;
+    border-radius: 13px;
+    width: 9pc;
+    height: 3pc;
+}
+
+#voter {
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #007bff;
+    color: white;
+    border: 2px solid white;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 13px;
+    width: 7pc;
+    height: 3pc;
+}
+
+#candidate span,
+#voter span {
+
+    cursor: pointer;
+    /* display: inline-block; */
+    position: relative;
+    transition: 0.5s;
+}
+
+#candidate span:after,
+#voter span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+#candidate:hover span,
+#voter:hover span {
+    padding-right: 25px;
+    font-weight: bold;
+}
+
+#candidate:hover span:after,
+#voter:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+

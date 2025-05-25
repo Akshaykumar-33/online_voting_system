@@ -1,0 +1,35 @@
+CREATE DATABASE IF NOT EXISTS online_voting_system;
+
+USE online_voting_system;
+
+CREATE TABLE IF NOT EXISTS userdata (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    mobile BIGINT(10),
+    gender INT(1),
+    password VARCHAR(255),
+    address VARCHAR(100),
+    photo VARCHAR(255),
+    role INT(1),
+    status INT(1),
+    votes INT(100)
+);
+
+
+CREATE TABLE IF NOT EXISTS meta (timeend TEXT);
+2024-05-09T14:30:00
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

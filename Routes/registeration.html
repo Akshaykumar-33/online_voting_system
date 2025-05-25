@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System - Registration</title>
+    <link rel="stylesheet" href="../CSS/register.css">
+</head>
+
+<body>
+    <div id="headersection">
+        <h1>Online Voting System</h1>
+    </div>
+
+    <div id="bodysection">
+        <h2>Registration</h2>
+        <form action="../API/registration.php" method="post" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Enter your name" required><br>
+            <input type="tel" name="number" placeholder="Enter your Number" minlength="10" required><br>
+            <input type="password" name="password" placeholder="Enter password" minlength="8"><br>
+            <input type="password" name="confirmpassword" placeholder="Confirm password" required><br>
+            <p>
+                <label for="male">Gender:</label>
+                <input type="radio" name="gender" id="male" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="Female">
+                <label for="female">Female</label>
+            </p>
+            <input type="text" name="address" placeholder="Address"><br>
+            <div class="role-upload">
+                <label for="photo">Upload Image:</label>
+                <input type="file" name="photo" id="photo" class="upload-button" required>
+            </div>
+
+            <div class="role-upload">
+                <label for="role">Select your role:</label>
+                <select name="role" id="role">
+                    <option value="3">Select Option</option>
+                    <option value="1">Voter</option>
+                    <option value="2">Group</option>
+                </select>
+            </div>
+            <button>Register</button>
+            <p id="p-login">Already a user? <a href=".././Routes/login.php">Login here</a></p>
+        </form>
+    </div>
+</body>
+
+</html>

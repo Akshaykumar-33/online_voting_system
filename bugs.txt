@@ -1,0 +1,42 @@
+1. Same mob no should not register -> done
+2. Case sensitivity of password   -> DONE
+3. restrict the no of attempts log
+4. Automatic logout on pressing back();
+
+
+To do:
+1. password Encryption
+2. OTP system
+3. result page   priority
+4. candidate list updation Automatic
+5. 
+
+<?php
+  // Plaintext password entered by the user 
+  $unencrypted_password = "Cloudways@123"; 
+  
+  // The hashed password can be retrieved from database 
+  $hash ="2y10D6pwJsA5KKdUs7tlrIC3z.we7QZR58wx9gEiuLlQ/dr7E/Rtnj9Ce";
+ 
+  
+  // Verify the hash code against the unencrypted password entered 
+  $verify = password_verify($unencrypted_password, $hash); 
+  
+  // Print the result depending if they match 
+  if ($verify) {
+       echo 'Correct Password!'; 
+       }
+ 
+  else { 
+      echo 'Password is Incorrect';
+       } 
+?>
+
+
+
+
+
+
+
+
+<p class="vote-count">Number of Votes: <?php echo $party_info['votes'] ?> </p>

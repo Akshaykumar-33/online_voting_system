@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(../images/img21.jpg);
+    background-size: cover;
+  
+}
+
+#headersection {
+    color: red;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#headersection h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+#bodysection {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #f9efe6;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    text-align: center;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="password"],
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="file"] {
+    width: calc(100% - 20px);
+    padding: 5px;
+    margin-top: 15px;
+}
+
+input[type="radio"] {
+    margin: 0 5px;
+}
+
+button {
+    width: calc(100% - 20px);
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+p {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 16px;
+}
+#p-login{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+/* CSS FOR ROLE AND UPLOAD BUTTON */
+.role-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.role-upload label {
+    margin-right: 10px;
+}
+#photo::-webkit-file-upload-button{
+    size: 10pc;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: larger;
+}
+#photo::-webkit-file-upload-button:hover{
+    background-color: #0056b3;
+    font-size: larger;
+
+}
+.role-upload .upload-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.role-upload .upload-button:hover {
+    background-color: #0056b3;
+}
+
+.role-upload img {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.role-upload img:hover {
+    transform: scale(1.05);
+}

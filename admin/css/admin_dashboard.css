@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+}
+#topbar {
+    
+    border: 1px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    border-radius: 15px; /* Rounded corners */
+    backdrop-filter: blur(10pc); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
+    padding: 20px;
+    margin: 20px;
+    text-align: center; /* Center align the text */   
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.topbar-content h1 {
+    animation: fadeIn 2s ease-in-out; /* Apply fade-in animation */
+    color: #000; /* Text color */
+    font-size: xx-large; /* Font size */
+    margin: 0; /* Remove default margin */
+}
+
+#sidebar {
+    width: 200px;
+    height: 90%;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-top-right-radius: 15px; /* Rounded corners */
+    position: fixed;
+    left: 0px;
+    padding: 10px;
+}
+
+.sidebar-content a {
+    display:block;
+    color: black; /* Link color */
+    padding: 10px;
+    text-decoration: none; /* Remove underline */
+    margin: 19px 0; /* Space between links */
+    font-size: 16px; /* Font size */
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.sidebar-content a:hover {
+    background-color: rgb(149, 146, 146);
+    /* #32db1c */
+    color: #ffffff;
+}
+
+
+#main-content {
+    margin-left: 100px;
+    margin-top: 70px;
+    transition: margin-left 0.2s;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+
+@media print {
+    body * {
+        visibility: hidden; /* Hide everything by default */
+    }
+    .printable, .printable * {
+        visibility: visible; /* Make printable elements visible */
+    }
+    .printable {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 0;
+    }
+    .block {
+        margin: 0; /* Remove margin for print */
+        padding: 0; /* Remove padding for print */
+        border: none; /*Remove border for print*/
+        /* page-break-inside: avoid; Avoid breaking inside blocks */
+    }
+    .block canvas {
+        width: 100% !important; /* Ensure canvas width is full for print */
+        height: auto !important; /* Allow canvas height to adjust */
+    }
+    #main-content {
+        margin-left: 0; /* Ensure no left margin for print */
+    }
+    #sidebar {
+        display: none; /* Hide sidebar for print */
+    }
+}
+
+.block {
+    
+    margin: 15px 0;
+    flex: 1 1 calc(50% - 40px);/*Ensure padding and border are included in the width*/
+}
+
+#blocks {
+   
+    padding: 20px;
+    width: 55pc;
+    margin-left: 20pc;
+    background: transparent;
+    background-color: whitesmoke;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
+    border-radius: 10px; /* Rounded corners */
+}
+
+h3 {
+    color: black; /* Dark grey */
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: black;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+
+
+

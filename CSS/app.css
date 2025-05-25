@@ -1,0 +1,80 @@
+body {
+    text-align: center;
+    /* background-color: rgb(93, 92, 92);*/
+    background-image: url(../images/img14.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    /* background-color: bisque; */
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 4pc;
+    color: chocolate;
+}
+
+#bck-logout {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* CSS FOR BACK BUTTON  */
+#back,
+#logout,
+#prof,
+#home {
+
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: wheat;
+    padding: 9px;
+    margin: 5px;
+    border-radius: 13px;
+    width: 7pc;
+    border: none;
+}
+
+
+
+#back span,
+#logout span,
+#prof span,
+#home span {
+
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+
+#back span:after,
+#logout span:after,
+#prof span:after,
+#home span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+#back:hover span,
+#logout:hover span,
+#prof:hover span,
+#home:hover span {
+    padding-right: 25px;
+}
+
+
+#back:hover span:after,
+#logout:hover span:after,
+#prof:hover span:after,
+#home:hover span:after {
+    opacity: 1;
+    right: 0;
+}
